@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-21T18:08:01+08:00",
-  "new": 40,
+  "at": "2026-11-23T08:24:38+00:00",
+  "new": 41,
   "sources": [
     {
       "source": "MOHRSS",
@@ -11,7 +11,7 @@
     {
       "source": "MHLW",
       "country": "JP",
-      "added": 0,
+      "added": 1,
       "errors": []
     },
     {
@@ -29,19 +29,19 @@
     {
       "source": "Labour Dept",
       "country": "HK",
-      "added": 8,
+      "added": 5,
       "errors": []
     },
     {
       "source": "MOL",
       "country": "TW",
-      "added": 2,
+      "added": 0,
       "errors": []
     },
     {
       "source": "Fair Work",
       "country": "AU",
-      "added": 3,
+      "added": 8,
       "errors": [
         "The read operation timed out"
       ]
@@ -49,7 +49,7 @@
     {
       "source": "Employment NZ",
       "country": "NZ",
-      "added": 1,
+      "added": 3,
       "errors": []
     },
     {
@@ -85,7 +85,7 @@
     {
       "source": "MOHR Malaysia",
       "country": "SEA",
-      "added": 2,
+      "added": 0,
       "errors": []
     }
   ]
