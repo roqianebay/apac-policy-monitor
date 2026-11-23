@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d1117">
+<meta name="description" content="Asia-Pacific employer policy updates across 14 markets — wages, visas, contracts, leave. Biweekly official-source monitor.">
+<meta property="og:title" content="APAC Employer Policy Monitor">
+<meta property="og:description" content="14 APAC markets · biweekly labor policy dashboard for HR teams">
+<meta property="og:type" content="website">
+<title>APAC Employer Policy Monitor</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d1117;--surface:#161b22;--card:#1c2128;--card-h:#21262d;
+  --border:#30363d;--accent:#58a6ff;--green:#3fb950;--orange:#f78166;
+  --red:#ff4444;--new:#e3b341;--text:#c9d1d9;--muted:#6e7681;--tag:#1f6feb;
+  --critical-bg:rgba(255,68,68,.08);--critical-border:rgba(255,68,68,.4);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);min-height:100vh}
+.hd{position:sticky;top:0;z-index:99;background:rgba(13,17,23,.94);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);padding:12px 28px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{width:34px;height:34px;border-radius:8px;flex-shrink:0;background:linear-gradient(135deg,#1f6feb,#3a7bd5);
+  display:flex;align-items:center;justify-content:center;font-size:16px}
+.hd-info{flex:1;min-width:0}
+.hd-title{font-size:14px;font-weight:700;color:#fff}
+.hd-sub{font-size:10px;color:var(--muted);margin-top:1px}
+.hd-right{display:flex;align-items:center;gap:10px;flex-shrink:0;flex-wrap:wrap;margin-left:auto}
+.stats{display:flex;gap:7px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:5px 11px;text-align:center;min-width:62px}
+.stat-n{font-size:17px;font-weight:800;line-height:1.2;color:var(--accent)}
+.stat-n.g{color:var(--green)}.stat-n.r{color:var(--red)}.stat-n.y{color:var(--new)}
+.stat-l{font-size:9px;color:var(--muted);margin-top:1px}
+.pulse{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--muted);white-space:nowrap}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.lang-btn,.rbtn{padding:4px 10px;border-radius:6px;border:1px solid var(--border);
+  background:var(--surface);color:var(--muted);font-size:11px;cursor:pointer;font-family:inherit;transition:.15s;white-space:nowrap}
+.lang-btn:hover,.rbtn:hover{border-color:var(--accent);color:var(--accent)}
+.rbtn.busy{opacity:.6;pointer-events:none}
+.alert-bar{background:rgba(255,68,68,.07);border-bottom:1px solid rgba(255,68,68,.2);
+  padding:6px 28px;display:flex;align-items:center;gap:10px;overflow:hidden}
+.alert-label{font-size:10px;font-weight:700;color:var(--red);white-space:nowrap;letter-spacing:.4px;flex-shrink:0}
+.alert-scroll{display:flex;gap:6px;flex-wrap:wrap}
+.alert-pill{font-size:10px;padding:2px 9px;border-radius:12px;background:rgba(255,68,68,.15);
+  border:1px solid rgba(255,68,68,.3);color:#ff8888;cursor:pointer;text-decoration:none}
+.filters{padding:9px 28px;display:flex;gap:6px;flex-wrap:wrap;background:var(--surface);
+  border-bottom:1px solid var(--border);position:sticky;top:0;z-index:98}
+.fb{padding:4px 11px;border-radius:16px;border:1px solid var(--border);background:transparent;
+  color:var(--muted);font-size:11px;cursor:pointer;transition:.15s;font-family:inherit}
+.fb:hover{border-color:var(--accent);color:var(--accent)}
+.fb.on{background:var(--tag);border-color:var(--tag);color:#fff}
+.fb.fire{border-color:#ff5555;color:#ff8888}
+.fb.fire.on{background:rgba(139,0,0,.5);border-color:#ff5555;color:#ffaaaa}
+.filter-sep{width:1px;background:var(--border);margin:0 3px;align-self:stretch}
+.main{padding:20px 28px}
+.summary{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:17px 20px;margin-bottom:22px}
+.summary-hd{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.6px;text-transform:uppercase;margin-bottom:13px}
+.trend-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:9px}
+.trend-card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.trend-card.alert{border-color:rgba(255,68,68,.35);background:var(--critical-bg)}
+.trend-icon{font-size:19px}.trend-title{font-size:12px;font-weight:600;color:var(--text)}
+.trend-body{font-size:11px;color:var(--muted);line-height:1.5}
+.country-section{margin-bottom:24px}
+.country-hd{display:flex;align-items:center;gap:7px;margin-bottom:11px;padding-bottom:7px;border-bottom:1px solid var(--border)}
+.country-flag{font-size:19px}.country-name{font-size:13px;font-weight:600;color:var(--text)}
+.country-count{font-size:10px;padding:2px 6px;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--muted);margin-left:3px}
+.country-crit{font-size:10px;padding:2px 6px;border-radius:10px;background:rgba(255,68,68,.15);border:1px solid rgba(255,68,68,.3);color:#ff8888;margin-left:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:10px}
+.section-hd{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:11px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:14px 16px;transition:.2s;
+  position:relative;overflow:hidden;text-decoration:none;display:block;cursor:pointer}
+.card:hover{background:var(--card-h);border-color:var(--accent);transform:translateY(-2px);box-shadow:0 5px 16px rgba(88,166,255,.1)}
+.card.crit-card{border-color:var(--critical-border);background:var(--critical-bg)}
+.card.crit-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#ff4444,#ff8c00)}
+.ch{display:flex;align-items:center;gap:5px;margin-bottom:8px;flex-wrap:wrap}
+.bs{font-size:9px;font-weight:800;padding:2px 5px;border-radius:4px;letter-spacing:.4px}
+.bs-live{background:var(--green);color:#0d1117}
+.bs-upcoming{background:var(--new);color:#0d1117}
+.bs-watch{background:var(--surface);border:1px solid var(--border);color:var(--muted)}
+.bs-new{background:#1f6feb;color:#fff}
+.bt{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(31,111,235,.2);color:#79c0ff}
+.bcrit{font-size:9px;font-weight:800;padding:2px 5px;border-radius:4px;background:rgba(255,68,68,.2);color:#ff8888;border:1px solid rgba(255,68,68,.3);margin-left:auto}
+.ct{font-size:13px;font-weight:500;line-height:1.55;color:var(--text);margin-bottom:8px}
+.cb{font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cf{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cf-left{display:flex;flex-direction:column;gap:2px}
+.cf-eff{font-size:10px;color:var(--muted)}.cf-eff span{color:var(--accent)}
+.impact{font-size:9px;padding:2px 6px;border-radius:4px;font-weight:600}
+.imp-h{background:rgba(255,68,68,.15);color:#ff8888}
+.imp-m{background:rgba(227,179,65,.15);color:#e3b341}
+.imp-w{background:rgba(63,185,80,.12);color:#3fb950}
+.ca{font-size:12px;color:var(--accent);opacity:0}.card:hover .ca{opacity:1}
+.empty{text-align:center;padding:54px 20px;color:var(--muted)}
+footer{text-align:center;padding:16px;font-size:10px;color:var(--muted);border-top:1px solid var(--border);margin-top:10px}
+.hidden{display:none!important}
+@media (max-width:720px){
+  .hd,.filters,.alert-bar,.main,footer .wrap-pad{padding-left:12px;padding-right:12px}
+  .hd{padding-top:max(12px,env(safe-area-inset-top))}
+  .hd-title{font-size:13px}
+  .hd-right{width:100%;margin-left:0;justify-content:flex-start}
+  .stats{flex-wrap:wrap}
+  .stat{min-width:56px;flex:1}
+  .grid{grid-template-columns:1fr}
+  .trend-grid{grid-template-columns:1fr}
+  .filters{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+    padding-bottom:10px;position:sticky;top:0}
+  .filter-sep{display:none}
+  .card:hover{transform:none}
+  .ca{opacity:1}
+  .alert-bar{align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="hd">
+  <div class="logo">🌏</div>
+  <div class="hd-info">
+    <div class="hd-title" data-i18n="title">APAC Employer Policy Monitor</div>
+    <div class="hd-sub" data-i18n="subtitle">Asia-Pacific · 14 Markets · Biweekly official-source crawl</div>
+  </div>
+  <div class="hd-right">
+    <div class="stats">
+      <div class="stat"><div class="stat-n" id="statTotal">0</div><div class="stat-l" data-i18n="statTotal">Total Policies</div></div>
+      <div class="stat"><div class="stat-n g" id="statLive">0</div><div class="stat-l" data-i18n="statLive">Live</div></div>
+      <div class="stat"><div class="stat-n r" id="statCrit">0</div><div class="stat-l" data-i18n="statCrit">Critical Alerts</div></div>
+      <div class="stat"><div class="stat-n y" id="statNew">0</div><div class="stat-l" data-i18n="statNew">This Cycle</div></div>
+    </div>
+    <div class="pulse"><span class="dot"></span><span data-i18n="lastChecked">Last crawl</span>: <span id="lastTime">—</span></div>
+    <button class="rbtn hidden" id="crawlBtn" type="button">↻ Crawl now</button>
+    <button class="lang-btn hidden" id="shareBtn" type="button">Share</button>
+    <button class="lang-btn" id="langBtn" type="button">中文</button>
+  </div>
+</div>
+<div class="alert-bar" id="alertBar"></div>
+<div class="filters">
+  <button class="fb on" data-f="all" data-i18n-label="filterAll">All</button>
+  <button class="fb fire" data-f="critical" data-i18n-label="filterCrit">⚠ Critical</button>
+  <button class="fb" data-f="newcycle" data-i18n-label="filterNew">New cycle</button>
+  <div class="filter-sep"></div>
+  <button class="fb" data-f="cn" data-i18n-label="cn">🇨🇳 China</button>
+  <button class="fb" data-f="jp" data-i18n-label="jp">🇯🇵 Japan</button>
+  <button class="fb" data-f="kr" data-i18n-label="kr">🇰🇷 Korea</button>
+  <button class="fb" data-f="sg" data-i18n-label="sg">🇸🇬 Singapore</button>
+  <button class="fb" data-f="hk" data-i18n-label="hk">🇭🇰 Hong Kong</button>
+  <button class="fb" data-f="tw" data-i18n-label="tw">🇹🇼 Taiwan</button>
+  <button class="fb" data-f="au" data-i18n-label="au">🇦🇺 Australia</button>
+  <button class="fb" data-f="nz" data-i18n-label="nz">🇳🇿 New Zealand</button>
+  <button class="fb" data-f="in" data-i18n-label="in">🇮🇳 India</button>
+  <button class="fb" data-f="sea" data-i18n-label="sea">🌏 SE Asia</button>
+  <div class="filter-sep"></div>
+  <button class="fb" data-f="wages" data-i18n-label="wages">Wages</button>
+  <button class="fb" data-f="social" data-i18n-label="social">Social Insurance</button>
+  <button class="fb" data-f="foreign" data-i18n-label="foreign">Foreign Workers</button>
+  <button class="fb" data-f="contracts" data-i18n-label="contracts">Contracts</button>
+  <button class="fb" data-f="ai" data-i18n-label="ai">AI &amp; Tech</button>
+  <button class="fb" data-f="safety" data-i18n-label="safety">Safety</button>
+  <button class="fb" data-f="leave" data-i18n-label="leave">Leave</button>
+</div>
+<div class="main">
+  <div class="summary" id="summaryPanel">
+    <div class="summary-hd" id="summaryTitle" data-i18n="summaryTitle">APAC Regional Summary</div>
+    <div class="trend-grid" id="trendGrid"></div>
+  </div>
+  <div id="sectionHd" class="section-hd" style="display:none"></div>
+  <div id="mainGrid"></div>
+  <div class="empty hidden" id="empty"><div data-i18n="noData">No matching policies found</div></div>
+</div>
+<footer class="wrap-pad">
+  <span data-i18n="footerNote">Sources: official labor sites + public RSS · For reference only — verify with official texts</span>
+  <br><span id="publicUrl" class="hidden"></span>
+</footer>
+<script>
+const STRINGS = {
+  en:{
+    title:'APAC Employer Policy Monitor',
+    subtitle:'Asia-Pacific · 14 Markets · Biweekly official-source crawl',
+    statTotal:'Total Policies',statLive:'Live',statCrit:'Critical Alerts',statNew:'This Cycle',
+    lastChecked:'Last crawl', filterAll:'All',filterCrit:'⚠ Critical',filterNew:'New cycle',
+    cn:'🇨🇳 China',jp:'🇯🇵 Japan',kr:'🇰🇷 Korea',sg:'🇸🇬 Singapore',
+    hk:'🇭🇰 Hong Kong',tw:'🇹🇼 Taiwan',au:'🇦🇺 Australia',nz:'🇳🇿 New Zealand',in:'🇮🇳 India',sea:'🌏 SE Asia',
+    wages:'Wages',social:'Social Insurance',foreign:'Foreign Workers',contracts:'Contracts',ai:'AI & Tech',safety:'Safety',leave:'Leave',
+    summaryTitle:'APAC Regional Summary',
+    noData:'No matching policies found',
+    footerNote:'Sources: official labor sites + public RSS · For reference only — verify with official texts',
+    crawlNow:'↻ Crawl now', crawling:'Crawling…', crawlHttp:'Open via python serve.py to crawl from the browser.',
+    share:'Share', shareCopied:'Link copied', shareFail:'Could not share',
+    priorityAlerts:'🚨 PRIORITY ALERTS', effective:'Effective', high:'High', med:'Medium', monitor:'Monitor',
+    live:'LIVE', upcoming:'UPCOMING', watch:'WATCH', updates:'updates', critical:'critical',
+    cLabel:{CN:'China',JP:'Japan',KR:'South Korea',SG:'Singapore',HK:'Hong Kong',TW:'Taiwan',AU:'Australia',NZ:'New Zealand',IN:'India',SEA:'SE Asia'},
+  },
+  zh:{
+    title:'亚太用工政策监控',
+    subtitle:'亚太地区 · 14个市场 · 每两周抓取官方公开源',
+    statTotal:'政策总数',statLive:'生效中',statCrit:'重大预警',statNew:'本轮新增',
+    lastChecked:'最近抓取', filterAll:'全部',filterCrit:'⚠ 重大',filterNew:'本轮新增',
+    cn:'🇨🇳 中国',jp:'🇯🇵 日本',kr:'🇰🇷 韩国',sg:'🇸🇬 新加坡',
+    hk:'🇭🇰 香港',tw:'🇹🇼 台湾',au:'🇦🇺 澳大利亚',nz:'🇳🇿 新西兰',in:'🇮🇳 印度',sea:'🌏 东南亚',
+    wages:'薪酬',social:'社会保险',foreign:'外籍员工',contracts:'劳动合同',ai:'AI与技术',safety:'职场安全',leave:'假期',
+    summaryTitle:'亚太地区总结',
+    noData:'暂无匹配政策',
+    footerNote:'数据来源：劳工部门官网及公开 RSS · 仅供参考，以官网为准',
+    crawlNow:'↻ 立即抓取', crawling:'抓取中…', crawlHttp:'请用 python serve.py 启动后再从浏览器抓取。',
+    share:'分享', shareCopied:'链接已复制', shareFail:'无法分享',
+    priorityAlerts:'🚨 重大预警', effective:'生效/发布', high:'高影响', med:'中影响', monitor:'观察',
+    live:'生效中', upcoming:'即将生效', watch:'关注', updates:'项更新', critical:'个重大',
+    cLabel:{CN:'中国',JP:'日本',KR:'韩国',SG:'新加坡',HK:'香港',TW:'台湾',AU:'澳大利亚',NZ:'新西兰',IN:'印度',SEA:'东南亚'},
+  }
+};
+
+let lang = localStorage.getItem('apac-lang') || 'en';
+const IS_LOCAL = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+let DATA = [];
+let TRENDS = [];
+let META = { generatedAt: '', newThisCycle: 0 };
+let currentFilter = 'all';
+
+function t(k){ return (STRINGS[lang]||STRINGS.en)[k] || STRINGS.en[k] || k; }
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function isNew(p){ return p.origin === 'crawl'; }
+
+function applyI18n(){
+  document.getElementById('langBtn').textContent = lang==='en' ? '中文' : 'EN';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t(el.getAttribute('data-i18n'));
+    if (v !== undefined) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-label]').forEach(el => {
+    const v = t(el.getAttribute('data-i18n-label'));
+    if (v !== undefined) el.textContent = v;
+  });
+  document.getElementById('crawlBtn').textContent = t('crawlNow');
+  document.getElementById('shareBtn').textContent = t('share');
+}
+
+function setupChrome(){
+  const crawl = document.getElementById('crawlBtn');
+  const share = document.getElementById('shareBtn');
+  if (IS_LOCAL && location.protocol.startsWith('http')) {
+    crawl.classList.remove('hidden');
+    share.classList.add('hidden');
+  } else {
+    crawl.classList.add('hidden');
+    share.classList.remove('hidden');
+    const u = document.getElementById('publicUrl');
+    if (location.protocol.startsWith('http')) {
+      u.textContent = location.href.replace(/\/$/, '');
+      u.classList.remove('hidden');
+    }
+  }
+}
+
+function bsHtml(p){
+  const map = {
+    live:`<span class="bs bs-live">${t('live')}</span>`,
+    upcoming:`<span class="bs bs-upcoming">${t('upcoming')}</span>`,
+    watch:`<span class="bs bs-watch">${t('watch')}</span>`
+  };
+  return (map[p.status]||'') + (isNew(p) ? `<span class="bs bs-new">NEW</span>` : '');
+}
+function impHtml(p){
+  const map = {high:`<span class="impact imp-h">${t('high')}</span>`, med:`<span class="impact imp-m">${t('med')}</span>`, monitor:`<span class="impact imp-w">${t('monitor')}</span>`};
+  return map[p.impact]||'';
+}
+function cardHtml(p){
+  return `<a class="card${p.critical?' crit-card':''}" href="${esc(p.src)}" target="_blank" rel="noopener">
+    <div class="ch">${bsHtml(p)}<span class="bt">${esc(p.type)}</span>${p.critical?'<span class="bcrit">⚠ CRITICAL</span>':''}</div>
+    <div class="ct">${esc(p.title)}</div>
+    <div class="cb">${esc(p.body)}</div>
+    <div class="cf"><div class="cf-left"><div class="cf-eff">${t('effective')}: <span>${esc(p.effective)}</span></div><div>${impHtml(p)}</div></div><span class="ca">→</span></div>
+  </a>`;
+}
+function countrySec(code, items){
+  const crit = items.filter(p=>p.critical).length;
+  const label = STRINGS[lang].cLabel[code] || code;
+  return `<div class="country-section">
+    <div class="country-hd">
+      <span class="country-flag">${items[0].flag}</span>
+      <span class="country-name">${label}</span>
+      <span class="country-count">${items.length} ${t('updates')}</span>
+      ${crit?`<span class="country-crit">${crit} ${t('critical')}</span>`:''}
+    </div>
+    <div class="grid">${items.map(cardHtml).join('')}</div>
+  </div>`;
+}
+
+function renderTrends(){
+  const grid = document.getElementById('trendGrid');
+  const cards = TRENDS.length ? TRENDS : [
+    {icon:'📡', title:'Baseline loaded', body:'Run a crawl to refresh official-source headlines.', alert:false},
+    {icon:'📅', title:'Every 14 days', body:'Windows Task Scheduler or GitHub Actions.', alert:false},
+    {icon:'🔎', title:'Verify official text', body:'This is a monitor, not legal advice.', alert:false},
+    {icon:'🌏', title:'14 markets', body:'Same coverage as the original dashboard.', alert:false},
+  ];
+  grid.innerHTML = cards.map(c => `<div class="trend-card${c.alert?' alert':''}">
+    <div class="trend-icon">${c.icon}</div>
+    <div class="trend-title">${esc(c.title)}</div>
+    <div class="trend-body">${esc(c.body)}</div>
+  </div>`).join('');
+}
+
+function renderAll(filter){
+  currentFilter = filter;
+  const grid = document.getElementById('mainGrid');
+  const empty = document.getElementById('empty');
+  const sp = document.getElementById('summaryPanel');
+  const sh = document.getElementById('sectionHd');
+  const CORDER = ['CN','JP','KR','SG','HK','TW','AU','NZ','IN','SEA'];
+  let list = DATA, grouped = false;
+  if (filter==='all'){ sp.style.display=''; sh.style.display='none'; grouped=true; }
+  else if (filter==='critical'){ sp.style.display='none'; list=DATA.filter(p=>p.critical); grouped=true; sh.textContent=t('filterCrit'); sh.style.display=''; }
+  else if (filter==='newcycle'){ sp.style.display='none'; list=DATA.filter(isNew); grouped=true; sh.textContent=t('filterNew'); sh.style.display=''; }
+  else if (['cn','jp','kr','sg','hk','tw','au','nz','in','sea'].includes(filter)){
+    sp.style.display='none'; list=DATA.filter(p=>String(p.country).toLowerCase()===filter);
+    sh.textContent=STRINGS[lang].cLabel[filter.toUpperCase()]||filter; sh.style.display=''; grouped=false;
+  } else {
+    sp.style.display='none';
+    const tm={wages:'Wages',social:'Social Insurance',foreign:'Foreign Workers',contracts:'Contracts',ai:'AI & Tech',safety:'Workplace Safety',leave:'Leave'};
+    list=DATA.filter(p=>p.type===(tm[filter]||filter));
+    sh.textContent=t(filter); sh.style.display=''; grouped=false;
+  }
+  if (!list.length){ grid.innerHTML=''; empty.classList.remove('hidden'); return; }
+  empty.classList.add('hidden');
+  if (grouped){
+    const byC={}; CORDER.forEach(c=>byC[c]=[]);
+    list.forEach(p=>{ if(byC[p.country]) byC[p.country].push(p); });
+    grid.innerHTML=CORDER.filter(c=>byC[c].length).map(c=>countrySec(c,byC[c])).join('');
+  } else {
+    const sorted=[...list].sort((a,b)=>a.critical===b.critical?0:a.critical?-1:1);
+    grid.innerHTML=`<div class="grid">${sorted.map(cardHtml).join('')}</div>`;
+  }
+}
+
+function buildAlertBar(){
+  const bar=document.getElementById('alertBar');
+  const items=DATA.filter(p=>p.critical && p.status==='live');
+  if(!items.length){ bar.style.display='none'; return; }
+  bar.style.display='';
+  bar.innerHTML=`<span class="alert-label">${t('priorityAlerts')}</span>
+    <div class="alert-scroll">${items.map(p=>`<a class="alert-pill" href="${esc(p.src)}" target="_blank" rel="noopener">${p.flag} ${esc(p.title)}</a>`).join('')}</div>`;
+}
+
+function updateStats(){
+  document.getElementById('statTotal').textContent = DATA.length;
+  document.getElementById('statLive').textContent = DATA.filter(p=>p.status==='live').length;
+  document.getElementById('statCrit').textContent = DATA.filter(p=>p.critical).length;
+  document.getElementById('statNew').textContent = META.newThisCycle || DATA.filter(isNew).length;
+  document.getElementById('lastTime').textContent = META.generatedAt
+    ? new Date(META.generatedAt).toLocaleString()
+    : '—';
+}
+
+function paint(){
+  applyI18n();
+  setupChrome();
+  updateStats();
+  buildAlertBar();
+  renderTrends();
+  renderAll(currentFilter);
+}
+
+async function loadData(){
+  try {
+    const res = await fetch('data/policies.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error(res.status);
+    const json = await res.json();
+    DATA = json.policies || [];
+    TRENDS = json.trends || [];
+    META.generatedAt = json.generatedAt || '';
+    META.newThisCycle = json.newThisCycle || 0;
+  } catch (e) {
+    DATA = [];
+    TRENDS = [];
+  }
+  paint();
+}
+
+document.getElementById('langBtn').addEventListener('click', () => {
+  lang = lang==='en' ? 'zh' : 'en';
+  localStorage.setItem('apac-lang', lang);
+  paint();
+});
+document.querySelectorAll('.fb').forEach(btn => {
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+    this.classList.add('on');
+    renderAll(this.dataset.f);
+  });
+});
+document.getElementById('shareBtn').addEventListener('click', async () => {
+  const url = location.href.split('#')[0];
+  try {
+    if (navigator.share) {
+      await navigator.share({ title: t('title'), text: t('subtitle'), url });
+      return;
+    }
+    await navigator.clipboard.writeText(url);
+    alert(t('shareCopied'));
+  } catch (e) {
+    if (e && e.name === 'AbortError') return;
+    prompt(t('share'), url);
+  }
+});
+document.getElementById('crawlBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('crawlBtn');
+  if (location.protocol === 'file:') { alert(t('crawlHttp')); return; }
+  btn.classList.add('busy');
+  btn.textContent = t('crawling');
+  try {
+    const res = await fetch('/api/crawl', { method: 'POST' });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.stderr || 'crawl failed');
+    await loadData();
+  } catch (err) {
+    alert(t('crawlHttp') + '\n' + err);
+  } finally {
+    btn.classList.remove('busy');
+    btn.textContent = t('crawlNow');
+  }
+});
+
+loadData();
+</script>
+</body>
+</html>

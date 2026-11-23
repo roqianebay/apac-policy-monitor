@@ -1,0 +1,92 @@
+{
+  "at": "2026-09-21T18:08:01+08:00",
+  "new": 40,
+  "sources": [
+    {
+      "source": "MOHRSS",
+      "country": "CN",
+      "added": 0,
+      "errors": []
+    },
+    {
+      "source": "MHLW",
+      "country": "JP",
+      "added": 0,
+      "errors": []
+    },
+    {
+      "source": "MOEL",
+      "country": "KR",
+      "added": 0,
+      "errors": []
+    },
+    {
+      "source": "MOM",
+      "country": "SG",
+      "added": 8,
+      "errors": []
+    },
+    {
+      "source": "Labour Dept",
+      "country": "HK",
+      "added": 8,
+      "errors": []
+    },
+    {
+      "source": "MOL",
+      "country": "TW",
+      "added": 2,
+      "errors": []
+    },
+    {
+      "source": "Fair Work",
+      "country": "AU",
+      "added": 3,
+      "errors": [
+        "The read operation timed out"
+      ]
+    },
+    {
+      "source": "Employment NZ",
+      "country": "NZ",
+      "added": 1,
+      "errors": []
+    },
+    {
+      "source": "Labour India",
+      "country": "IN",
+      "added": 8,
+      "errors": []
+    },
+    {
+      "source": "MOLISA Vietnam",
+      "country": "SEA",
+      "added": 0,
+      "errors": []
+    },
+    {
+      "source": "DOL Thailand",
+      "country": "SEA",
+      "added": 0,
+      "errors": []
+    },
+    {
+      "source": "Kemnaker",
+      "country": "SEA",
+      "added": 0,
+      "errors": []
+    },
+    {
+      "source": "DOLE",
+      "country": "SEA",
+      "added": 8,
+      "errors": []
+    },
+    {
+      "source": "MOHR Malaysia",
+      "country": "SEA",
+      "added": 2,
+      "errors": []
+    }
+  ]
+}
