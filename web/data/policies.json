@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T08:24:38+00:00",
+  "generatedAt": "2026-11-23T16:22:53+08:00",
   "intervalDays": 14,
   "newThisCycle": 41,
   "policies": [
@@ -16,7 +16,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBFTk5fWjZoZ3pTNFlhUTR6VVUxUjk2NjFqWnFCUl93RG1rRkY1bmh2cjViZlQtdlM5N3FTRkwwZ1A5LXBxSE9NVXo2RHkwZlZSOHBlN2NrbzBKNGdMOU5JM2w1SQ?oc=5",
       "sourceName": "MHLW",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -32,7 +32,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBVZzgxUGJHUzdvQVYyQ2R6b2phYWlPcjVVZy1GSG9JYUg4UnJrcVp6aDhBQmZfRWJVUzBOeHlNbWRuX2t5TlluOHlPdXNJY3JWdkkxYU5mdTg1ZVRtNzRmZnVR?oc=5",
       "sourceName": "MOM",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -48,7 +48,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9SZElyLTZBSzBFY3c0eThwczNqWWJUS0ptZDdzRkF6cUJvbFB2Yi11MnRPLVdyLXEzT0o2bEhmNmlPX1ZMZHJqczhDVGltTFpEZkVTSUtBYlhuZzVtQjQyblBUaEZTcW01QUptb096QXlQRTg?oc=5",
       "sourceName": "MOM",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -64,7 +64,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBvb1dNQmczbVpyUVdLcVlzZm5kQnhGc08tX3VFWWNUQnN4OHFNaVNrOFdwbkx3UTAwSXFxbU9HcU1peGVxS3ZTV0V0bE5ndnpXTi1ZaWZ3NEY3SjVpNEE?oc=5",
       "sourceName": "MOM",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -80,7 +80,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9hQzNYVld1VXVsTnNReGhJaVBWSTdNOHU1clZDTDVubnMyMi1PYktoMmpFalh5eFV5dG5pY1VaYjRwVnpKMW12dEdRb1luYXR0NE00a3k1Sk9WRkppdFhlQW9oU0FSVnRIZEg4WF94b3lCZ2xLQzNiUXJOTy1Fdw?oc=5",
       "sourceName": "MOM",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -96,7 +96,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBfNDh2N2xpOWctSHVpU05jYzJGcHhEQ3owNWNHZUdFQ0tNTmVWZFRjOExzWVJHMVF4c1I0MUF4RHZqYVNMSk52eTNLdm1QV3pKTlpLZk5jUEgtV1BuNlhzNl9OT20?oc=5",
       "sourceName": "MOM",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -112,7 +112,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9NeENFYzRfWmNSQXV0TDJUTVFRZkNPQnNEekxiNGpXWDNRZWk2X3ZabjFGaWJrRE1yZ3JZbVVqTVYxR3MxXy1rai1kUklDUVlRZ0cwTU81VXkyeDlOeV9EcVNxYTFQOUZqQUE5RDFBMC0?oc=5",
       "sourceName": "MOM",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -128,7 +128,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5mS0c4VE1KU3NJclpRWENsbS1Ic0dvTWl3RS15TVhFd00yU0FRbFlzbzRWWm52WVpDZVRQTG5sWnd1dU5vTDFhVUpZY01ITE5kd1RPaHhaVFplQlF6MDBRUXA3OXJMU0h1N0E?oc=5",
       "sourceName": "MOM",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -144,7 +144,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPNnptTTFuU0daSEZnSVN1WmNsSGI2aDlwRXByd1dfbGZSZm84eWYySjBqb2hWZ0ZGaWNSWDZ5X3NUSHRmTXotdmhMRTFobEZpbmhvN2ptUzY0WUsyZ1FlM3FkeXJ1YTRrNGR4dk9oTkczZjlOMy1fV1RnVXhXU05lMjlWcU1SUUhzc0VGckdhaUpQOEtORXN6Y0s2UFhQeWJpZnhkQzNrczd6RFJYNDU0MWZXNVBmZVlEekpQbUdGZWgzNll3?oc=5",
       "sourceName": "MOM",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -160,7 +160,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMickFVX3lxTE9XdnZqYWlGS3VjVXFsWWR6SndCSkMxa2RlcGN6Si1VVjRIdEhwQ3BEb01sOTJPU3pTLURadE5WQ25nZHNsbmVBaVdyYUVSSXN2cnQ5WF9ESE81V2JhVjhJZFN3bHl0N1BXTjlSTWZjb1NMdw?oc=5",
       "sourceName": "Labour Dept",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -176,7 +176,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE12ajNJSm40b1YtdE9TaXNvNlpTdUFHMmdINlozT1JzZE5oUmIwRHdFazRmdC0zN1RfTDZSWURuLVBWeXhKMzFBNmpHeUxJZXlkRWxvZUg1d3o?oc=5",
       "sourceName": "Labour Dept",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -192,7 +192,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1jLVpmYzJremZPeXd2UTU3anVtek96VlNwUWtrTTFzN2E5dXh2MHF0cWFidUZhaUxmTUJ3c25KYWNoQmg5ZUVWY0V2QkVIdUNENENUTkZiRWRxYmVadnBrRzhn?oc=5",
       "sourceName": "Labour Dept",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -208,7 +208,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1wVjJJU3FkUWx4Vm5IUmxYcnBYNTRSbXZKRWgtaFRNZEVBWF9TemRoY0VVMXpRLXUxTUh6VzFRalM5aXhLakpwRVZqWTB4SmJacmJ5ZGtELVZwR2F2aWc?oc=5",
       "sourceName": "Labour Dept",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -224,7 +224,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9TM19QdHEtODVBWjJsU2QtVGI4QzNxOFN0QmRXOWJVbjBfWW1xRnR0TDlYWlZqdExyV0hnV29Md2pnbmpvbjZxeW1PLW9wMFJWSER3M0NuYm1XYmNBdXR3T1hR?oc=5",
       "sourceName": "Labour Dept",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -240,7 +240,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQYjhVVS1kZTI4TGNFTUdUMFRrWm1mOHlCaXFQd0x0d05xQXBPeVFjMkRzYl8wOHdTQ0hUajdXdkpWcjktb1lIQlo3SE40bGRYM2lGTi1VOUNfNTdzLVNnSV80N2FkMUN3NU5UVm0yY2dBVGdBZXc0YnpEdXYxSUJFNHk4Nm45bVprT2N2b0pGRXVfWG5Ec2J4MkRkUnFHUEJGcXduNTI4QUw3SkR3V210RUotMkhpdw?oc=5",
       "sourceName": "Fair Work",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -256,7 +256,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZGZmRm9aMU9uclF2U09JVjJma2ZLSzYwWG9jNnNfR1hOaEtpUy01RkdOUzc5Q190d28wRXVYMkJpS0RWTFdrVFRzNm5KUVBXalNDZ0prODB0S3l2aHJtT0xVVkZsbjN2ZlRTUi1zTUtTTGQ5aXAyT05HSWlfWEF0bE9Xbl9oY2lPSkhBTmRqUkZ0Rm9rdGdZS2lUT1VuelZlbGRPTEdwMVhiMVdZdkJ1Uzl2YU1xWm43SzYweTJ1ZG1tZDJ6WmR1NFl6TnBiRVJwRGhkai1R?oc=5",
       "sourceName": "Fair Work",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -272,7 +272,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB0SmdpU01EaXZJR2tVaVN0Zk43Q3JTSU04ZVVfRV9oX0pGOUcwdnBISjRoQ0hUcUs2ZlpHYzU1NE56RWFPc0VLc1JFSmFSSWZWSXVDbURmRjk4LXpJRTlMdnU2RHFrd3ptRE4tTWlTbGdUcnRwaGpv?oc=5",
       "sourceName": "Fair Work",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -288,7 +288,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9TQUFraXFTWVVaX2UzcVVkVVFPUlR0d1gydU4yMm1xSlRrRjBrVTIwQlE0WDNQSVBmSngyOURjbXlpU3poWWgwODZwUWVQenk3U1loNndvdVQ?oc=5",
       "sourceName": "Fair Work",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -304,7 +304,7 @@
       "impact": "high",
       "src": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB4dWhJUE5UUjMyLV9xV3FJdFc3N1l3Mm5wNUs1aWFaWWw3OXg3QU83MTFVR0VlUFd1NE90RGJYeFpnM1c5SkIybUtYSkJISHlRUk8zQlpCUGlqaTRMeTYtdWQxTVVzUQ?oc=5",
       "sourceName": "Fair Work",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -320,7 +320,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFAxS2xseVEzTEEySGJvQnhOWTQ1Nm1ScTlTdXBHaFpmeFpMU2lhLXRwNlVNWnpQV2piSGNaWmZJNlJIdW9TT1dzdw?oc=5",
       "sourceName": "Fair Work",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -336,7 +336,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTmdkcnVvSkRJbTM2cGlhamJfZ255YmJwLThKTks0ellTVU9FNEdGaS1KZDB4MDlMbW5mc2VPa1V3elZ2YndfTmpwYnAwRWZJUnp4ejd0LUtwMFFCbzVERmNINTN2YllqOS1ERkhWYXFSY0xxdE41ajJzWHVPQ19VbzdaNXpyd0tGbDFXcHdMWF85dkpRMFQxU3hLS0pnSTFkdDYwcUVTT3ZCUQ?oc=5",
       "sourceName": "Fair Work",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -352,7 +352,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUU1pcEZJQTVXWkx2WUFlZmc3TFFueF9ycWNLNGQ0djlRLU5SekUzUTlnSzBXRVRLYk9lRWEya1JzMmJjdjQtUEtBUGt6NzRoSG9IM0ticjZtMkdHNEF2UkZXaGVfeVFPcEh0My1NQUVHdTExcjNyZldkOUxhYTFRYmdNcnY1UXpVMG45Sk9xWE8zTzItRVVKa2VKcEdIaF9lWkFCZExIbmlQWm1Ua1RMTnBYRUVHRDJsUmJwMnJLQzE?oc=5",
       "sourceName": "Fair Work",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -368,7 +368,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPUldLRUhrUnZKQ0JjaU5MNi1ybVhNbG15QjVDanZremswaG94bThGNW9NUk9QTjRrS3U0d1pMbldGWk9NWjluQmo3N2RYdzU2MFRyclZsU2ZLRE85eEljN3BuTVVLbmtPNTVDcXNKODhESGtDYXZGeVhSRm1FaVhHaGZwSzJ5bFF5aTg5aTBVV3pQQnEyNWRrdHU0RlR1aTZTZHZxS1d6b2VjX3h1cFIyQWVnZ0Q5dw?oc=5",
       "sourceName": "Employment NZ",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -384,7 +384,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPV2pIX05SVVVscm52V1ZvekZSMTA5ZHpjSFJqa09GczBlUkFQVmV0eVBwWUdmRFVLMl9vUzNqZ2Y2Ty13OWd1RkRKYkhMTTFkQ0wxcUVrU2JIbzNhdFBGSXBVSGxWVjkycjQ5bVZZWWdQa3hjMlNYMEtCYl9ucW1YMjI3cUJfYXMyOXZIVGltcFZBV2p0?oc=5",
       "sourceName": "Employment NZ",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -400,55 +400,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQlh6VG5neXcteXlra094Z3hDNDhIWG5qNzBidTNJX1QyUXlodGlGTDBUOTVyWnZkZ3hldllIcm1ZZ085UzhodTZpNlpQZm9SZ1BSSFhaVVRjd2c1dGl1eGFQRHJnN01PUWVocUVvNzlvcnZKVzQzOHltc3g3UVQteFpRTDdJNzBuTHNVS1RuZXBUX3UtcGFIbklZNFNxTkFidnpIUlRHRDRTN240Uk9J?oc=5",
       "sourceName": "Employment NZ",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
-      "origin": "crawl"
-    },
-    {
-      "id": "crawl-in-89698f50bdfc",
-      "country": "IN",
-      "flag": "🇮🇳",
-      "status": "live",
-      "critical": false,
-      "title": "Search - Ministry of Labour & Employment",
-      "body": "Search Ministry of Labour & Employment",
-      "type": "Contracts",
-      "effective": "2026-11-17",
-      "impact": "med",
-      "src": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1OYTFrbmlrZ0tnUUlNTExLclNhMjVQSzdUX1c4cllIaEdxMHlucUZjblVLY0lwS0lINm1XdkhIeWd0SGlkMlBz?oc=5",
-      "sourceName": "Labour India",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
-      "origin": "crawl"
-    },
-    {
-      "id": "crawl-in-3200a982ec3b",
-      "country": "IN",
-      "flag": "🇮🇳",
-      "status": "live",
-      "critical": false,
-      "title": "LABOUR COURT-II, NEW DELHI I.D. NO. 182/2018 Mrs. Kanti Devi, Sanjay K - Ministry of Labour & Employment",
-      "body": "LABOUR COURT-II, NEW DELHI I.D. NO. 182/2018 Mrs. Kanti Devi, Sanjay K Ministry of Labour & Employment",
-      "type": "Contracts",
-      "effective": "2026-11-21",
-      "impact": "med",
-      "src": "https://news.google.com/rss/articles/CBMi-wNBVV95cUxOTHIwck10UjM5cUZmYjlGLUFlTXkzQm92V0ZFa0xtSlhERU5tR2Vza0dLaWhhNXJJVUM5eUxZVjl0MnlkY2FwdHJVNlRTMFhQbW5lOEUtZjRxTlNFUW1BMmhqdGxaaDNtUW4yVjZRNGpCcERZWTFHampCSGlaMm9TV2plTGZYUk9LbGtUMVpPVDJhaFRXWDd5MVdwUFZpOEV1LW5uenlTUmpqMlltQldjcWp5a0VyenF5a2lQS1NTMjFtQUZFc1VuemM0Zm05NENjTkhEVV8tejFqXzM5VTZ0alFIS3VneWdDLTlVc0Fjc3l4OWFscmVoRWNsRHotNlRURk9TRzgzOWc0aHgzdnQxX1VVaXUycHEzR2lqTmZJaTdreWZTbi0tSUdtc01aOXVUMlRKYXpuVW0wc2dyRHBWQlF6X1F4Nll5b1EwUVkyY09GdWw4ODU4VTctaEp6RHk5aGlZa2Q0eW1uZU1IYk9HcWFoa3lIQWRMSGphMTgwRmRiZE9aeHFOWldKQWU3TEl3WU9JMUM0MXBhQ1JtX1dIbEFoWHZ3SEFQV25DR0JCbVk3WENjeGlWSmVYN3FWbGRBOGFKdzJpcmYzV2tnOHotX2pwR1N3NFRaYTdEa19OVXVmZmg2UjNuQlBIaGVBcVAyVUx3MjZYWjJpNkU?oc=5",
-      "sourceName": "Labour India",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
-      "origin": "crawl"
-    },
-    {
-      "id": "crawl-in-8fc3010db257",
-      "country": "IN",
-      "flag": "🇮🇳",
-      "status": "live",
-      "critical": false,
-      "title": "Acts and Policies - Ministry of Labour & Employment",
-      "body": "Acts and Policies Ministry of Labour & Employment",
-      "type": "Contracts",
-      "effective": "2026-11-20",
-      "impact": "med",
-      "src": "https://news.google.com/rss/articles/CBMic0FVX3lxTE85UkxYNWtLWmtha2dCV280TWRSNGM0WEs1cVpTZE1BNHFQaVhRa1FqblM4ZlBDSG1tanRjLUI5N1dpQ082M1NfTXlrVjU4OURFZXhPSVU1V25hcXNVQ1pfbzBrY2hDaG95TVdDWkczUmNncHc?oc=5",
-      "sourceName": "Labour India",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -464,39 +416,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPRzZSREd0ZDJPWjFkeHdWcFF2MkFIQ1FhQ0dSWWdTU0xZdHg3X0UwakZWaGtqSWJtejlGZzVGV0l0ZWJvZ1F0R3JOS2x5Ukh5OERPUG9qVFpBME5aSGJVUy16NEwtcVIxQ1JFbWV3ZG96OTJESjc1eUo4SDJObkdZVExBRWtQYVlUeVVZWUtR?oc=5",
       "sourceName": "Labour India",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
-      "origin": "crawl"
-    },
-    {
-      "id": "crawl-in-3d5bbaf912d8",
-      "country": "IN",
-      "flag": "🇮🇳",
-      "status": "live",
-      "critical": false,
-      "title": "Child Women Labour - Ministry of Labour & Employment",
-      "body": "Child Women Labour Ministry of Labour & Employment",
-      "type": "Contracts",
-      "effective": "2026-10-02",
-      "impact": "med",
-      "src": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNV19obmktSmNfV3l0X3V6V0REeW1qY0pVaGxzXzdfWkM5X1Vyc0NnV04yTVplWU90d2d1ZUZRSm5LVkRHaGRzLXRHM3dNZFl5T20ycnkwdi0xbUpWSXRwNFBlSkpka0VZRGdHVy1tUXhCMkU0X3RFUTlwMjRhZEVydzVhbDdiSndPb1ZYRk15MWtaLURnTVRxSHZtc0RpUkk?oc=5",
-      "sourceName": "Labour India",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
-      "origin": "crawl"
-    },
-    {
-      "id": "crawl-in-6a8557046ba8",
-      "country": "IN",
-      "flag": "🇮🇳",
-      "status": "live",
-      "critical": false,
-      "title": "Home - Ministry of Labour and Employment",
-      "body": "Home Ministry of Labour and Employment",
-      "type": "Contracts",
-      "effective": "2026-11-18",
-      "impact": "med",
-      "src": "https://news.google.com/rss/articles/CBMiakFVX3lxTE80aXMwTHB4Z0NUR3llZHBoWWsyV3JVUXFUTjVCRHRpXy1rUC0wTTBCejVmOXpsLXdta3J2MG1Jc0NhTGJqdlVDWkl0MVRiblFySGcwT0NUWngyR0s3UXVzTHlCbWU2ZldCYkE?oc=5",
-      "sourceName": "Labour India",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -512,23 +432,103 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNaE45dVFmcmFuNkxNdG95cE5ZOTNReUNiYVNqMFJjQzBIMkFBblRKTkNIdjk4ZlNCZ0x3bUhtOWNVOVJLUWowTjBCSzg2Y2ZGVlpUQmFNVkpwT1dPSlQxbVNRWTlBNVgtTWhZLVJZaGJUU0RPREc0S3ZkVHNjRkFzNFVQUU1melpuZWRiNk9lZjBhUG9rcUtF?oc=5",
       "sourceName": "Labour India",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
-      "id": "crawl-in-6e61e2794670",
+      "id": "crawl-in-6a8557046ba8",
       "country": "IN",
       "flag": "🇮🇳",
       "status": "live",
       "critical": false,
-      "title": "Payment of Wages Act - Ministry of Labour - Labour.gov.in",
-      "body": "Payment of Wages Act - Ministry of Labour Labour.gov.in",
+      "title": "Home - Ministry of Labour and Employment",
+      "body": "Home Ministry of Labour and Employment",
       "type": "Contracts",
-      "effective": "2026-11-11",
+      "effective": "2026-11-18",
       "impact": "med",
-      "src": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9BSVRwbUZfVjNjREw3dGJPUW5MekhoQXNwTWhGRmsya0REWjl0Q25YdEhHbUc4UXBvbHd4ajE1SUtfbURzQVI2UkFFSmQ3TXpndGZCYkdQTktBVzh6QWRGZzNLcm11Zw?oc=5",
+      "src": "https://news.google.com/rss/articles/CBMiakFVX3lxTE80aXMwTHB4Z0NUR3llZHBoWWsyV3JVUXFUTjVCRHRpXy1rUC0wTTBCejVmOXpsLXdta3J2MG1Jc0NhTGJqdlVDWkl0MVRiblFySGcwT0NUWngyR0s3UXVzTHlCbWU2ZldCYkE?oc=5",
       "sourceName": "Labour India",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
+      "origin": "crawl"
+    },
+    {
+      "id": "crawl-in-3ffcf4b5a7da",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "status": "live",
+      "critical": false,
+      "title": "Child Women Labour - Ministry of Labour & Employment",
+      "body": "Child Women Labour Ministry of Labour & Employment",
+      "type": "Contracts",
+      "effective": "2026-01-23",
+      "impact": "med",
+      "src": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZEdsMzJwaTZ6djdsVlZyT3hfSWFSMWh5a2JjREVIRmJRS0RpLVA0VjZuSFhLeXU5d3VzejZTVXVqdEpMXzNJdW56OGNCeHpMQTk4ajd3MmRncG9KYVdQOVA5YThYYTRtN1BXWC1rX3ZlaHNwUXA4WWJXUUEtS3pMRmRqOGpPT2tiQUQzR3FxS3lqTHRacjRuMDJvb3NzY0NmNjB3UFJKRXdWLVlEcVhGSGpaTXdlZw?oc=5",
+      "sourceName": "Labour India",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
+      "origin": "crawl"
+    },
+    {
+      "id": "crawl-in-89698f50bdfc",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "status": "live",
+      "critical": false,
+      "title": "Search - Ministry of Labour & Employment",
+      "body": "Search Ministry of Labour & Employment",
+      "type": "Contracts",
+      "effective": "2026-11-17",
+      "impact": "med",
+      "src": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1OYTFrbmlrZ0tnUUlNTExLclNhMjVQSzdUX1c4cllIaEdxMHlucUZjblVLY0lwS0lINm1XdkhIeWd0SGlkMlBz?oc=5",
+      "sourceName": "Labour India",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
+      "origin": "crawl"
+    },
+    {
+      "id": "crawl-in-8fc3010db257",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "status": "live",
+      "critical": false,
+      "title": "Acts and Policies - Ministry of Labour & Employment",
+      "body": "Acts and Policies Ministry of Labour & Employment",
+      "type": "Contracts",
+      "effective": "2026-11-20",
+      "impact": "med",
+      "src": "https://news.google.com/rss/articles/CBMic0FVX3lxTE85UkxYNWtLWmtha2dCV280TWRSNGM0WEs1cVpTZE1BNHFQaVhRa1FqblM4ZlBDSG1tanRjLUI5N1dpQ082M1NfTXlrVjU4OURFZXhPSVU1V25hcXNVQ1pfbzBrY2hDaG95TVdDWkczUmNncHc?oc=5",
+      "sourceName": "Labour India",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
+      "origin": "crawl"
+    },
+    {
+      "id": "crawl-in-3200a982ec3b",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "status": "live",
+      "critical": false,
+      "title": "LABOUR COURT-II, NEW DELHI I.D. NO. 182/2018 Mrs. Kanti Devi, Sanjay K - Ministry of Labour & Employment",
+      "body": "LABOUR COURT-II, NEW DELHI I.D. NO. 182/2018 Mrs. Kanti Devi, Sanjay K Ministry of Labour & Employment",
+      "type": "Contracts",
+      "effective": "2026-11-21",
+      "impact": "med",
+      "src": "https://news.google.com/rss/articles/CBMi-wNBVV95cUxOTHIwck10UjM5cUZmYjlGLUFlTXkzQm92V0ZFa0xtSlhERU5tR2Vza0dLaWhhNXJJVUM5eUxZVjl0MnlkY2FwdHJVNlRTMFhQbW5lOEUtZjRxTlNFUW1BMmhqdGxaaDNtUW4yVjZRNGpCcERZWTFHampCSGlaMm9TV2plTGZYUk9LbGtUMVpPVDJhaFRXWDd5MVdwUFZpOEV1LW5uenlTUmpqMlltQldjcWp5a0VyenF5a2lQS1NTMjFtQUZFc1VuemM0Zm05NENjTkhEVV8tejFqXzM5VTZ0alFIS3VneWdDLTlVc0Fjc3l4OWFscmVoRWNsRHotNlRURk9TRzgzOWc0aHgzdnQxX1VVaXUycHEzR2lqTmZJaTdreWZTbi0tSUdtc01aOXVUMlRKYXpuVW0wc2dyRHBWQlF6X1F4Nll5b1EwUVkyY09GdWw4ODU4VTctaEp6RHk5aGlZa2Q0eW1uZU1IYk9HcWFoa3lIQWRMSGphMTgwRmRiZE9aeHFOWldKQWU3TEl3WU9JMUM0MXBhQ1JtX1dIbEFoWHZ3SEFQV25DR0JCbVk3WENjeGlWSmVYN3FWbGRBOGFKdzJpcmYzV2tnOHotX2pwR1N3NFRaYTdEa19OVXVmZmg2UjNuQlBIaGVBcVAyVUx3MjZYWjJpNkU?oc=5",
+      "sourceName": "Labour India",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
+      "origin": "crawl"
+    },
+    {
+      "id": "crawl-in-82091fba13ab",
+      "country": "IN",
+      "flag": "🇮🇳",
+      "status": "live",
+      "critical": false,
+      "title": "L.C.Case No.3 of 24 dt.16-11-26 - Ministry of Labour & Employment",
+      "body": "L.C.Case No.3 of 24 dt.16-11-26 Ministry of Labour & Employment",
+      "type": "Contracts",
+      "effective": "2026-11-16",
+      "impact": "med",
+      "src": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZGZwTFhJd3RKSzJFT1FKVTFabEhqa3NUZURILURlQ0FNUXNGazVRWW5SX3BVMkx5eHY2WHQ0NlBtQ2lqR196TU5SQlhueXFWWTlXUHhKYkxLYmZyTmhfa0FxVVowWENzb2YtQ19NTTJBNWpXYkxEaGdnUUtCTGtVaW9QQlJvNXFJTk1waEpFR2dFV1k5TlZEcUQzYw?oc=5",
+      "sourceName": "Labour India",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -544,7 +544,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRFB6Q3h5MHFVNGw3bTFHS29oZlZoQWt6VUVtcE9IWTBiVURxb3M5Mlp4eFVoQnNUeW5mdGR3Ry13cXoxdk8yb2tFS0wyRklTbE5RT2NsUzlMZ0xSTW83clRZSzRnNmlQeUpBVGQ0ZVNPRWR1WHdGZXZzeC1fY0NCdFlwM3dRWVdtN01INUlESGg3MU05c1Z5Z1Zob0ttWlpFUmM3TnVB?oc=5",
       "sourceName": "DOLE",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -560,7 +560,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOHRMMUhwYWV4ZFN6aWlVUllDZWJ5WVkyRmVYMUV3cWVRQWRZVG5hVHhWQTNOZnpkU0lyeGluR1hSemk2cTFmd0ltXzM2QldodFdrYUlGWGVtT0xKMnQ4Y1ZTYzdJUlB1T3JhWFpzVW5sTGw5T3phT2dJZnBiaUZGb2hoRVhlVjJ2Mzc3TGp0MHB5VFFLWXZQcGRUTUhfRm1aOFAzZHVQc2d5MTRrY2NzVHVhOXNuVnpHbEpKWQ?oc=5",
       "sourceName": "DOLE",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -576,7 +576,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVjlDbmJtdGZqbmhPa2xrcklCRTRYaUR5MXF2bjV3SFZCOHlOYy1iT2ZfMnktMDB4U1daTGtmb25ncW5tUWVqbTltMGxRMVpEMGhXc09Ock5VTnE4dXJGSXIzUldGUHVpMTNncG5IV2V1NnJsMmU1bzZrdU5PdFBRcUd3aFBaZmtGanN2TnJvU2c1TXFCM0dhMktTZ1MyX3Fqd3Q1UkdJTURVUTBsN0I2cEZkaTQyNzJWZFRuREktZDVlNkU?oc=5",
       "sourceName": "DOLE",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -592,7 +592,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOUnczVHFMNEZLQXpGT2dsTkhoSWJnQ09Nb0J0Z2hla3Y2NjhjRlBNLVZUS0tvYlc0MXY2S1EtMHZxZEhLcGEyUmtDVXFQNThMXzRTZGxRcE90Ylh5YzFnRWgyemd0ekRtWTh1elNEU2VsSkZLU3NjZWpBRXdITmhQMVJsRmRuVm5SUkFldDRUblExZGhUVzdoVWU1VkNOM3FRUjJwazlFaHNoSFY5SWNEMVZFcUdlSGdTUXZnak05Mmw5QXlhWlpPSTB1THRUTGlnUHkyOTZsNEFCMVFJS290WFFwNGREYVZZWkF2c1ladVRPdmROWXFiemRwVkpxQ0ZTMkE?oc=5",
       "sourceName": "DOLE",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -608,7 +608,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMivwFBVV95cUxObW0xWk04NG1PdFZqTG44WkY4MlpRZDN3M2NGYjZEb1FuTlBIMUNYSHdQNXprSnpodkp2Sno4ZXUwS2o1TjE3UzM2cVNsb041UWdkRVhGMHhlaEZRRXc0ZEJWMmhQX0M0LWFGNVRNS3RCaGZzdFRPTmZCdWx6YXhnY1FrbGZIOTlUamdlTF9PMEtoOVh5d3g2LTRUN20yMmpYVFlLT0ZNX1dDazNlSTgxVnp2M1l1SnRYNGx0YlQwNA?oc=5",
       "sourceName": "DOLE",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -624,7 +624,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZzRtd3BXYXRTNVJGUEZIZ0s3OWsxWEpzSmM2cWdKcUNsMjg0WkQ4QmR3OXFwbmx6NFNGNERTY3dsSVp6STlVMVMzVFVxRWJ1MW9iOTZTQk1qWVlfdlROMVR6WEhYY0VwRENmUzdadTRNTXNTdkVUazFXMk5QRXdEU1lhYjUtWHRNeEJfcXBFeTZLaFpzdDJhU1NhZUE1NDFzMUV0Z29vRQ?oc=5",
       "sourceName": "DOLE",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -640,7 +640,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMUREMjIyT0NvbkVwMlFMVmJPVkFZSGIySExuaW9pdlF6WVVIcmRXR015SFMtanczS0t3WGlLaXBTLWlBemFMMXNERDR6RnNzTmYtamFmdG5ZVnVMMmtKcGRfbHBDX3ljWVA0RkFVU0pMQVZDVGh4eXFkT0I3cFQ2VW9VaHJ1MWlBaWJ4WmI2eFlKc0xJcHFV?oc=5",
       "sourceName": "DOLE",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -656,7 +656,7 @@
       "impact": "med",
       "src": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbTU0WHBIRmV0NnByMXM1NWp4OFlOLWNGMDZXNzFDUkpqUVFTamgyQ2VMb3RRMWZrbmswWEdOMkVSWWsyeGNtZG5UWUZGc1RoOWNhX09sY1VSMmY0TWlPR2dWb045N05WRE5HOGVFck1sYXhuZ25FTl9WVmNGdlhnUXJiUzg5Q2FycmFWLWU1QWFPeW8?oc=5",
       "sourceName": "DOLE",
-      "fetchedAt": "2026-11-23T08:24:00+00:00",
+      "fetchedAt": "2026-11-23T16:22:10+08:00",
       "origin": "crawl"
     },
     {
@@ -1306,7 +1306,9 @@
       "source": "MOL",
       "country": "TW",
       "added": 0,
-      "errors": []
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
+      ]
     },
     {
       "source": "Fair Work",

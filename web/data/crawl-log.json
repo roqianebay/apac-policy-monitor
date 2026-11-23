@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-23T08:24:38+00:00",
+  "at": "2026-11-23T16:22:53+08:00",
   "new": 41,
   "sources": [
     {
@@ -36,7 +36,9 @@
       "source": "MOL",
       "country": "TW",
       "added": 0,
-      "errors": []
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
+      ]
     },
     {
       "source": "Fair Work",
