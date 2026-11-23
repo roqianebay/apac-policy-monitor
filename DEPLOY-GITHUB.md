@@ -59,6 +59,35 @@ https://你的用户名.github.io/apac-policy-monitor/
 Settings → Pages 若提示配置失败，到 Settings → Actions → General，  
 **Workflow permissions** 选 **Read and write permissions**，保存后再跑一次 Deploy。
 
+## Authorize 按钮点不了？（常见：公司账号 / SSO）
+
+设备码页里 **Authorize GitHub CLI** 灰色不可点时，不要用网页授权，改用 **Token**：
+
+1. 浏览器打开：https://github.com/settings/tokens  
+   - 个人项目：用 **Fine-grained token** 或 **Tokens (classic)**  
+   - 若页面顶部有 **「Configure SSO」/「Enable SSO」**，必须先对你的组织点 **Authorize**（否则 Token 也不能推代码）
+2. 新建 Token，至少勾选：**repo**（或 fine-grained 对该仓库 Read and write）
+3. 复制 Token（只显示一次）
+
+PowerShell（把 `ghp_xxxx` 换成你的 Token，不要发给任何人）：
+
+```powershell
+@'
+ghp_你的Token粘贴在这里
+'@ | & "$env:ProgramFiles\GitHub CLI\gh.exe" auth login --with-token
+& "$env:ProgramFiles\GitHub CLI\gh.exe" auth status
+cd "C:\Users\roqian\Desktop\Test for Cursor\apac-policy-monitor"
+.\publish-github.ps1
+```
+
+若公司策略禁止 PAT，只能：用**个人 GitHub 账号**建公开仓，或让 IT 放行 GitHub CLI OAuth。
+
+### 浏览器仍异常时
+
+- 无痕窗口打开 https://github.com/login/device  
+- 确认登录的是**要用来放仓库**的那个账号（不是另一个）  
+- 暂时关闭广告拦截插件后再试设备码
+
 ## 可选：安装 GitHub CLI（以后一条命令建库）
 
 ```powershell
