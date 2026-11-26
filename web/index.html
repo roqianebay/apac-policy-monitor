@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlRoot">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -188,7 +188,13 @@ const STRINGS = {
     share:'Share', shareCopied:'Link copied', shareFail:'Could not share',
     priorityAlerts:'🚨 PRIORITY ALERTS', effective:'Effective', high:'High', med:'Medium', monitor:'Monitor',
     live:'LIVE', upcoming:'UPCOMING', watch:'WATCH', updates:'updates', critical:'critical',
+    badgeNew:'NEW', badgeCrit:'CRITICAL',
+    trendDefault1Title:'Baseline loaded', trendDefault1Body:'Run a crawl to refresh official-source headlines.',
+    trendDefault2Title:'Every 14 days', trendDefault2Body:'Windows Task Scheduler or GitHub Actions.',
+    trendDefault3Title:'Verify official text', trendDefault3Body:'This is a monitor, not legal advice.',
+    trendDefault4Title:'14 markets', trendDefault4Body:'Same coverage as the original dashboard.',
     cLabel:{CN:'China',JP:'Japan',KR:'South Korea',SG:'Singapore',HK:'Hong Kong',TW:'Taiwan',AU:'Australia',NZ:'New Zealand',IN:'India',SEA:'SE Asia'},
+    typeLabel:{'Wages':'Wages','Social Insurance':'Social Insurance','Foreign Workers':'Foreign Workers','Contracts':'Contracts','AI & Tech':'AI & Tech','Workplace Safety':'Workplace Safety','Leave':'Leave'},
   },
   zh:{
     title:'亚太用工政策监控',
@@ -205,11 +211,23 @@ const STRINGS = {
     share:'分享', shareCopied:'链接已复制', shareFail:'无法分享',
     priorityAlerts:'🚨 重大预警', effective:'生效/发布', high:'高影响', med:'中影响', monitor:'观察',
     live:'生效中', upcoming:'即将生效', watch:'关注', updates:'项更新', critical:'个重大',
+    badgeNew:'新增', badgeCrit:'重大',
+    trendDefault1Title:'基线数据已加载', trendDefault1Body:'运行抓取任务以刷新官方来源标题。',
+    trendDefault2Title:'每 14 天', trendDefault2Body:'可通过 Windows 计划任务或 GitHub Actions 定时抓取。',
+    trendDefault3Title:'核对官方法规原文', trendDefault3Body:'本看板仅供参考，不构成法律意见。',
+    trendDefault4Title:'14 个市场', trendDefault4Body:'覆盖与原看板相同的亚太市场范围。',
     cLabel:{CN:'中国',JP:'日本',KR:'韩国',SG:'新加坡',HK:'香港',TW:'台湾',AU:'澳大利亚',NZ:'新西兰',IN:'印度',SEA:'东南亚'},
+    typeLabel:{'Wages':'薪酬','Social Insurance':'社会保险','Foreign Workers':'外籍员工','Contracts':'劳动合同','AI & Tech':'AI与技术','Workplace Safety':'职场安全','Leave':'假期'},
   }
 };
 
+const TOPIC_ZH = {
+  'Contracts':'劳动合同','Foreign Workers':'外籍员工','Social Insurance':'社会保险',
+  'Wages':'薪酬','AI & Tech':'AI与技术','Workplace Safety':'职场安全','Leave':'假期'
+};
+
 let lang = localStorage.getItem('apac-lang') || 'en';
+let POLICY_ZH = {};
 const IS_LOCAL = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
 let DATA = [];
 let TRENDS = [];
@@ -219,8 +237,34 @@ let currentFilter = 'all';
 function t(k){ return (STRINGS[lang]||STRINGS.en)[k] || STRINGS.en[k] || k; }
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function isNew(p){ return p.origin === 'crawl'; }
+function typeLabel(type){
+  const map = (STRINGS[lang]||STRINGS.en).typeLabel || {};
+  return map[type] || type;
+}
+function policyText(p, field){
+  if(lang !== 'zh') return p[field] || '';
+  const z = POLICY_ZH[p.id];
+  if(z && z[field]) return z[field];
+  return p[field] || '';
+}
+function localizeTrend(c){
+  if(lang !== 'zh') return c;
+  const m = String(c.title||'').match(/^(.+):\s*(\d+)\s*new item\(s\)$/i);
+  if(m){
+    const topic = TOPIC_ZH[m[1]] || m[1];
+    const n = m[2];
+    return {
+      ...c,
+      title:`${topic}：本轮新增 ${n} 条`,
+      body:`最近 14 天抓取中匹配到 ${n} 条公开更新。`
+    };
+  }
+  return c;
+}
 
 function applyI18n(){
+  const root = document.getElementById('htmlRoot');
+  if (root) root.lang = lang === 'zh' ? 'zh-CN' : 'en';
   document.getElementById('langBtn').textContent = lang==='en' ? '中文' : 'EN';
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const v = t(el.getAttribute('data-i18n'));
@@ -257,7 +301,7 @@ function bsHtml(p){
     upcoming:`<span class="bs bs-upcoming">${t('upcoming')}</span>`,
     watch:`<span class="bs bs-watch">${t('watch')}</span>`
   };
-  return (map[p.status]||'') + (isNew(p) ? `<span class="bs bs-new">NEW</span>` : '');
+  return (map[p.status]||'') + (isNew(p) ? `<span class="bs bs-new">${t('badgeNew')}</span>` : '');
 }
 function impHtml(p){
   const map = {high:`<span class="impact imp-h">${t('high')}</span>`, med:`<span class="impact imp-m">${t('med')}</span>`, monitor:`<span class="impact imp-w">${t('monitor')}</span>`};
@@ -265,9 +309,9 @@ function impHtml(p){
 }
 function cardHtml(p){
   return `<a class="card${p.critical?' crit-card':''}" href="${esc(p.src)}" target="_blank" rel="noopener">
-    <div class="ch">${bsHtml(p)}<span class="bt">${esc(p.type)}</span>${p.critical?'<span class="bcrit">⚠ CRITICAL</span>':''}</div>
-    <div class="ct">${esc(p.title)}</div>
-    <div class="cb">${esc(p.body)}</div>
+    <div class="ch">${bsHtml(p)}<span class="bt">${esc(typeLabel(p.type))}</span>${p.critical?`<span class="bcrit">⚠ ${t('badgeCrit')}</span>`:''}</div>
+    <div class="ct">${esc(policyText(p,'title'))}</div>
+    <div class="cb">${esc(policyText(p,'body'))}</div>
     <div class="cf"><div class="cf-left"><div class="cf-eff">${t('effective')}: <span>${esc(p.effective)}</span></div><div>${impHtml(p)}</div></div><span class="ca">→</span></div>
   </a>`;
 }
@@ -287,12 +331,13 @@ function countrySec(code, items){
 
 function renderTrends(){
   const grid = document.getElementById('trendGrid');
-  const cards = TRENDS.length ? TRENDS : [
-    {icon:'📡', title:'Baseline loaded', body:'Run a crawl to refresh official-source headlines.', alert:false},
-    {icon:'📅', title:'Every 14 days', body:'Windows Task Scheduler or GitHub Actions.', alert:false},
-    {icon:'🔎', title:'Verify official text', body:'This is a monitor, not legal advice.', alert:false},
-    {icon:'🌏', title:'14 markets', body:'Same coverage as the original dashboard.', alert:false},
+  const defaults = [
+    {icon:'📡', title:t('trendDefault1Title'), body:t('trendDefault1Body'), alert:false},
+    {icon:'📅', title:t('trendDefault2Title'), body:t('trendDefault2Body'), alert:false},
+    {icon:'🔎', title:t('trendDefault3Title'), body:t('trendDefault3Body'), alert:false},
+    {icon:'🌏', title:t('trendDefault4Title'), body:t('trendDefault4Body'), alert:false},
   ];
+  const cards = TRENDS.length ? TRENDS.map(localizeTrend) : defaults;
   grid.innerHTML = cards.map(c => `<div class="trend-card${c.alert?' alert':''}">
     <div class="trend-icon">${c.icon}</div>
     <div class="trend-title">${esc(c.title)}</div>
@@ -338,7 +383,7 @@ function buildAlertBar(){
   if(!items.length){ bar.style.display='none'; return; }
   bar.style.display='';
   bar.innerHTML=`<span class="alert-label">${t('priorityAlerts')}</span>
-    <div class="alert-scroll">${items.map(p=>`<a class="alert-pill" href="${esc(p.src)}" target="_blank" rel="noopener">${p.flag} ${esc(p.title)}</a>`).join('')}</div>`;
+    <div class="alert-scroll">${items.map(p=>`<a class="alert-pill" href="${esc(p.src)}" target="_blank" rel="noopener">${p.flag} ${esc(policyText(p,'title'))}</a>`).join('')}</div>`;
 }
 
 function updateStats(){
@@ -347,8 +392,8 @@ function updateStats(){
   document.getElementById('statCrit').textContent = DATA.filter(p=>p.critical).length;
   document.getElementById('statNew').textContent = META.newThisCycle || DATA.filter(isNew).length;
   document.getElementById('lastTime').textContent = META.generatedAt
-    ? new Date(META.generatedAt).toLocaleString()
-    : '—';
+  ? new Date(META.generatedAt).toLocaleString(lang === 'zh' ? 'zh-CN' : undefined)
+  : '—';
 }
 
 function paint(){
@@ -372,6 +417,12 @@ async function loadData(){
   } catch (e) {
     DATA = [];
     TRENDS = [];
+  }
+  try {
+    const zr = await fetch('data/policy-zh.json?v=20261126-i18n', { cache: 'no-store' });
+    if (zr.ok) POLICY_ZH = await zr.json();
+  } catch (e) {
+    POLICY_ZH = {};
   }
   paint();
 }
